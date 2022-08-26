@@ -1,0 +1,6 @@
+.DS_Store
+!requirements.txt
+__pycache__/
+/.idea
+/venv
+/env
