@@ -1,3 +1,6 @@
+"""
+To use, you will have to set up an AWS account and authenticate with boto3.
+"""
 import boto3
 
 from boto3.dynamodb.conditions import Attr
