@@ -46,10 +46,10 @@ if __name__ == "__main__":
     iris_df = sns.load_dataset("iris")
     column = 'sepal_length'
     srs = generate_series(iris_df, column)
-    # make_density_plot(srs)
+    make_density_plot(srs)
     run_one_sample_norm_ks_test(srs)
 
     transformed_df = apply_power_transform(iris_df)
     transformed_srs = transformed_df[column]
-    # make_density_plot(transformed_srs)
+    make_density_plot(transformed_srs)
     run_one_sample_norm_ks_test(transformed_srs)

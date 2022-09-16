@@ -31,17 +31,17 @@ def run_anderson_test(srs, comparison_dist='norm'):
 
 
 if __name__ == "__main__":
-    # e = random.exponential(scale=1.0, size=1_000)
-    # run_anderson_test(e)
-    # n = random.normal(loc=0.0, scale=1.0, size=1_000)
-    # run_anderson_test(n)
+    e = random.exponential(scale=1.0, size=1_000)
+    run_anderson_test(e)
+    n = random.normal(loc=0.0, scale=1.0, size=1_000)
+    run_anderson_test(n)
 
     column = 'activity_score'
     srs = generate_series(column)
     srs = srs.dropna()
     print(srs.mean())
     print(srs.std())
-    # make_density_plot(srs)
+    make_density_plot(srs)
     run_anderson_test(srs)
     run_one_sample_norm_ks_test(srs)
 

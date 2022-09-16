@@ -26,8 +26,8 @@ if __name__ == "__main__":
 
     train_df = df.loc[df['acquired_date'] <= '2019-06-30']
     prod_df = df.loc[df['acquired_date'] >= '2019-07-01']
-    # make_density_plot(train_df['activity_score'], save=True, file_name='train')
-    # make_density_plot(prod_df['activity_score'], save=True, file_name='prod')
+    make_density_plot(train_df['activity_score'], save=True, file_name='train')
+    make_density_plot(prod_df['activity_score'], save=True, file_name='prod')
 
     p_value = calculate_ks_statistic(train_df, prod_df, 'activity_score')
     print(p_value)
